@@ -1,9 +1,11 @@
 {
   "name": "@storybook/expect",
-  "version": "0.0.0",
+  "version": "1.0.0-rc.0",
   "browser": "bundle.js",
   "license": "MIT",
-  "files": ["./bundle.js"],
+  "files": [
+    "./bundle.js"
+  ],
   "scripts": {
     "dev": "webpack --watch --mode development",
     "build": "webpack --mode production"
