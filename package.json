@@ -11,6 +11,9 @@
   "files": [
     "./bundle.js"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "webpack --watch --mode development",
     "build": "webpack --mode production",
