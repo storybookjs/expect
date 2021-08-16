@@ -14,9 +14,12 @@ jobs:
         with:
           node-version: '16'
       - run: |
+          echo "Setting git user: `git --no-pager log -1 --format='%an <%ae>'`"
           git config --global user.name "`git --no-pager log -1 --format='%an'`"
           git config --global user.email "`git --no-pager log -1 --format='%ae'`"
-      - run: npm set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+      - run: |
+          echo "Setting npm authToken"
+          npm set //registry.npmjs.org/:_authToken=$NPM_TOKEN
       - run: |
           npm install
           npm install --save-dev expect@latest
