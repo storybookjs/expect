@@ -13,9 +13,13 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
-      - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
-      - run: npm install
-      - run: npm install --save-dev expect@latest
-      - run: node auto-release.mjs `npm view expect version`
+      - run: |
+          npm set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+          git config --global user.name "`git --no-pager log -1 --format='%an'`"
+          git config --global user.email `git --no-pager log -1 --format='%ae'`
+      - run: |
+          npm install
+          npm install --save-dev expect@latest
+          node auto-release.mjs `npm view expect version`
     env:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
