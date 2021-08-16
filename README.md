@@ -1,6 +1,6 @@
 # @storybook/expect
 
-![npm version](https://img.shields.io/npm/v/@storybook/expect?label=%40storybook%2Fexpect)
+[![npm version](https://img.shields.io/npm/v/@storybook/expect?label=%40storybook%2Fexpect)](https://npmjs.com/package/@storybook/expect)
 
 Browser-compatible version of Jest's [`expect`](https://jestjs.io/docs/expect).
 
