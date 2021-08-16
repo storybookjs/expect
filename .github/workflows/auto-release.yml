@@ -1,0 +1,17 @@
+name: "Automatically release when new version of `expect` is released"
+on:
+  schedule:
+    - cron: "0 0 * * *"
+jobs:
+  auto-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+      - env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - run: npm install
+      - run: npm install --save-dev expect@latest
+      - run: node auto-release.mjs `npm view expect version`
