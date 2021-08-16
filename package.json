@@ -1,6 +1,6 @@
 {
   "name": "@storybook/expect",
-  "version": "1.0.0-rc.1",
+  "version": "27.0.6",
   "description": "Browser-compatible version of Jest's `expect`",
   "repository": {
     "type": "git",
@@ -19,8 +19,15 @@
   "devDependencies": {
     "expect": "^27.0.6",
     "node-polyfill-webpack-plugin": "^1.1.4",
+    "release-it": "^14.11.5",
+    "semver": "^7.3.5",
     "terser-webpack-plugin": "^5.1.4",
     "webpack": "^5.50.0",
     "webpack-cli": "^4.7.2"
+  },
+  "release-it": {
+    "github": {
+      "release": true
+    }
   }
 }
