@@ -1,8 +1,8 @@
 # @storybook/expect
 
-Browser-compatible version of Jest's `expect`.
+![npm version](https://img.shields.io/npm/v/@storybook/expect?label=%40storybook%2Fexpect)
 
-See https://jestjs.io/docs/expect for documentation.
+Browser-compatible version of Jest's [`expect`](https://jestjs.io/docs/expect).
 
 ## Installation
 
@@ -23,3 +23,9 @@ import { expect } from "@storybook/expect"
 
 expect(true).toBe(true)
 ```
+
+> Note the named import.
+
+## Documentation
+
+👉 https://jestjs.io/docs/expect
