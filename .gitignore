@@ -4,3 +4,4 @@ bundle.js.LICENSE.txt
 package-lock.json
 yarn.lock
 dist
+.vscode
