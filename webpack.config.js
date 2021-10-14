@@ -1,14 +1,10 @@
 const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
 const TerserPlugin = require("terser-webpack-plugin")
+const { CleanWebpackPlugin } = require("clean-webpack-plugin")
 const path = require("path")
 
 module.exports = {
   entry: "./src/index.ts",
-  output: {
-    path: __dirname,
-    filename: "index.js",
-    libraryTarget: "module",
-  },
   module: {
     rules: [
       {
@@ -18,12 +14,12 @@ module.exports = {
       },
     ],
   },
-  resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
-  },
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
+    library: {
+      type: "module"
+    }
   },
   experiments: {
     outputModule: true,
@@ -42,8 +38,12 @@ module.exports = {
     moduleIds: "named",
     chunkIds: "named",
   },
-  plugins: [new NodePolyfillPlugin()],
+  plugins: [
+    new CleanWebpackPlugin(),
+    new NodePolyfillPlugin()
+  ],
   resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
     alias: {
       "graceful-fs": "fs",
     },
