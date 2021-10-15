@@ -1,4 +1,4 @@
-name: "Automatically release when new version of `expect` is released"
+name: "Auto release on new downstream version of `expect`"
 on:
   push:
     branches:
@@ -24,7 +24,10 @@ jobs:
         run: |
           npm install
           npm install --save-dev expect@latest
+      - name: Status
+        run: |
           git status
+          git diff .
       - name: Release package (if necessary)
         run: node auto-release.mjs `npm view expect version`
     env:
