@@ -30,7 +30,5 @@ jobs:
           git commit -m "Update version"
       - name: Release package (if necessary)
         run: node auto-release.mjs `npm view expect version`
-      - name: Push
-        run: git push origin HEAD
     env:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
