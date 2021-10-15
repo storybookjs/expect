@@ -18,7 +18,7 @@
   "scripts": {
     "dev": "webpack --watch --mode development",
     "build": "webpack --mode production",
-    "prepublish": "npm run build"
+    "prepack": "npm run build"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^4.0.0",
