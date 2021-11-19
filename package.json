@@ -6,7 +6,7 @@
     "type": "git",
     "url": "https://github.com/storybookjs/expect.git"
   },
-  "browser": "dist/index.js",
+  "main": "dist/index.js",
   "license": "MIT",
   "files": [
     "dist/**/*"
