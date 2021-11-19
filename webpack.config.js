@@ -17,12 +17,6 @@ module.exports = {
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
-    library: {
-      type: "module"
-    }
-  },
-  experiments: {
-    outputModule: true,
   },
   optimization: {
     minimizer: [new TerserPlugin({
