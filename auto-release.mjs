@@ -1,3 +1,4 @@
+import execa from "execa"
 import { createRequire } from "module"
 import release from "release-it"
 import semver from "semver"
@@ -15,6 +16,16 @@ async function main() {
   console.log(`Found newer version of 'expect' (${expectVersion}). Publishing update...`)
   const { name, version } = await release({ increment: expectVersion })
   console.log(`Released ${name}@${version}`)
+
+  try {
+    console.log(`Creating dist-tag for @storybook/jest...`)
+    const { stdout } = await execa.command(
+      `npm dist-tag add ${name}@${version} @storybook/jest --otp ${process.env.NPM_TOKEN}`
+    )
+    console.log(stdout)
+  } catch (err) {
+    console.error(err)
+  }
 }
 
 main()

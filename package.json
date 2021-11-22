@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "clean-webpack-plugin": "^4.0.0",
+    "execa": "^5.1.1",
     "expect": "27.3.1",
     "node-polyfill-webpack-plugin": "^1.1.4",
     "release-it": "^14.11.5",
