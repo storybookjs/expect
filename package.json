@@ -1,6 +1,6 @@
 {
   "name": "@storybook/expect",
-  "version": "27.3.2-1",
+  "version": "27.3.2-2",
   "description": "Browser-compatible version of Jest's `expect`",
   "repository": {
     "type": "git",
