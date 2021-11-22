@@ -6,7 +6,8 @@ In case you want to do a manual release, make it a **prerelease**, otherwise you
 
 ```
 npm version prerelease
-npm dist-tag add @storybook/expect@$(npm view @storybook/expect version) @storybook/jest
+npm publish
+npm dist-tag add @storybook/expect@`npm view @storybook/expect version` @storybook/jest
 ```
 
 The dist tag is used by the [@storybook/jest](https://www.npmjs.com/package/@storybook/jest) package.
