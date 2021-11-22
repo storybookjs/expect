@@ -16,8 +16,14 @@ module.exports = {
   },
   output: {
     filename: 'index.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist', process.env.ESM ? 'esm' : 'cjs'),
+    library: {
+      type: process.env.ESM ? 'module' : 'commonjs'
+    }
   },
+  experiments: process.env.ESM ? {
+    outputModule: true,
+  } : {},
   optimization: {
     minimizer: [new TerserPlugin({
       extractComments: {
