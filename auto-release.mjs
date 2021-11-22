@@ -20,7 +20,7 @@ async function main() {
   try {
     console.log(`Creating dist-tag for @storybook/jest...`)
     const { stdout } = await execa.command(
-      `npm dist-tag add ${name}@${version} @storybook/jest --otp ${process.env.NPM_TOKEN}`
+      `npm dist-tag add ${name}@${version} storybook-jest --otp ${process.env.NPM_TOKEN}`
     )
     console.log(stdout)
   } catch (err) {
