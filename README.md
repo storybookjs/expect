@@ -19,12 +19,10 @@ npm install @storybook/expect
 ## Usage
 
 ```js
-import { expect } from "@storybook/expect"
+import expect from "@storybook/expect"
 
 expect(true).toBe(true)
 ```
-
-> Note the named import.
 
 ## Documentation
 
