@@ -21,19 +21,31 @@
     "build": "npm run build:esm && npm run build:cjs",
     "build:esm": "ESM=true webpack --mode production",
     "build:cjs": "webpack --mode production",
-    "prepublish": "npm run build"
+    "prerelease": "npm run build",
+    "release": "auto shipit -d"
   },
   "devDependencies": {
+    "@auto-it/first-time-contributor": "^10.32.6",
+    "@auto-it/released": "^10.32.6",
+    "auto": "^10.32.6",
     "clean-webpack-plugin": "^4.0.0",
     "execa": "^5.1.1",
     "expect": "27.4.6",
     "node-polyfill-webpack-plugin": "^1.1.4",
-    "release-it": "^14.11.5",
     "semver": "^7.3.5",
     "terser-webpack-plugin": "^5.1.4",
     "ts-loader": "^9.2.6",
     "typescript": "^4.4.3",
     "webpack": "^5.50.0",
     "webpack-cli": "^4.7.2"
+  },
+  "author": "Yann Braga <yannbf@gmail.com>",
+  "auto": {
+    "plugins": [
+      "npm",
+      "first-time-contributor",
+      "released"
+    ],
+    "onlyPublishWithReleaseLabel": true
   }
 }
