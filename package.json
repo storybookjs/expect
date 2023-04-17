@@ -22,7 +22,7 @@
     "build:esm": "ESM=true webpack --mode production",
     "build:cjs": "webpack --mode production",
     "postinstall": "patch-package",
-    "prepublish": "npm run build"
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "@types/jest": "28.1.3"
