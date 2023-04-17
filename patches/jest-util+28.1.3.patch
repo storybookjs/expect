@@ -1,0 +1,12 @@
+diff --git a/node_modules/jest-util/build/isInteractive.js b/node_modules/jest-util/build/isInteractive.js
+index bc25399..a8da3a5 100644
+--- a/node_modules/jest-util/build/isInteractive.js
++++ b/node_modules/jest-util/build/isInteractive.js
+@@ -22,6 +22,6 @@ function _ciInfo() {
+  * LICENSE file in the root directory of this source tree.
+  */
+ var _default =
+-  !!process.stdout.isTTY && process.env.TERM !== 'dumb' && !_ciInfo().isCI;
++  !!process.stdout && !!process.stdout.isTTY && process.env.TERM !== 'dumb' && !_ciInfo().isCI;
+ 
+ exports.default = _default;

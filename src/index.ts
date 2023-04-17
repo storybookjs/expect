@@ -1,3 +1,4 @@
-import { default as expect } from 'expect'
+import { default as expect } from "expect"
 
-export default expect as jest.Expect
+// @testing-library/jest-dom enhances jest.Expect with e.g. `toBeInTheDocument`
+export default expect as any as jest.Expect
