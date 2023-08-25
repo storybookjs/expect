@@ -6,8 +6,8 @@
     "type": "git",
     "url": "https://github.com/storybookjs/expect.git"
   },
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "license": "MIT",
   "files": [
     "dist/**/*"
@@ -18,7 +18,7 @@
   },
   "scripts": {
     "dev": "ESM=true webpack --watch --mode development",
-    "build": "npm run build:esm && npm run build:cjs",
+    "build": "rimraf dist && npm run build:esm && npm run build:cjs",
     "build:esm": "ESM=true webpack --mode production",
     "build:cjs": "webpack --mode production",
     "prepublishOnly": "patch-package && npm run build"
@@ -33,6 +33,7 @@
     "node-polyfill-webpack-plugin": "^1.1.4",
     "patch-package": "^6.5.1",
     "release-it": "^14.11.5",
+    "rimraf": "^5.0.1",
     "semver": "^7.3.5",
     "terser-webpack-plugin": "^5.1.4",
     "ts-loader": "^9.2.6",
