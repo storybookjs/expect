@@ -16,11 +16,11 @@
     ".": {
       "require": "./dist/index.js",
       "import": "./dist/index.mjs",
-      "types": "./dist/types/index.d.ts"
+      "types": "./dist/index.d.ts"
     },
     "./package.json": "./package.json"
   },
-  "types": "dist/types/index.d.ts",
+  "types": "dis/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
