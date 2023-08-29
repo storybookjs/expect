@@ -20,7 +20,7 @@
     },
     "./package.json": "./package.json"
   },
-  "types": "dis/index.d.ts",
+  "types": "dist/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
