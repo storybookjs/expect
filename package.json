@@ -26,7 +26,8 @@
   },
   "scripts": {
     "dev": "ESM=true webpack --watch --mode development",
-    "build": "rimraf dist && npm run build:esm && npm run build:cjs",
+    "prebuild": "rimraf dist",
+    "build": "npm run build:esm && npm run build:cjs",
     "build:esm": "ESM=true webpack --mode production",
     "build:cjs": "webpack --mode production",
     "prepublishOnly": "patch-package && npm run build"
@@ -35,7 +36,6 @@
     "@types/jest": "28.1.3"
   },
   "devDependencies": {
-    "clean-webpack-plugin": "^4.0.0",
     "execa": "^5.1.1",
     "expect": "28.1.3",
     "node-polyfill-webpack-plugin": "^1.1.4",

@@ -1,6 +1,5 @@
 const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
 const TerserPlugin = require("terser-webpack-plugin")
-const { CleanWebpackPlugin } = require("clean-webpack-plugin")
 const path = require("path")
 
 module.exports = {
