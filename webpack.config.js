@@ -1,6 +1,5 @@
 const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
 const TerserPlugin = require("terser-webpack-plugin")
-const { CleanWebpackPlugin } = require("clean-webpack-plugin")
 const path = require("path")
 
 module.exports = {
@@ -15,8 +14,8 @@ module.exports = {
     ],
   },
   output: {
-    filename: 'index.js',
-    path: path.resolve(__dirname, 'dist', process.env.ESM ? 'esm' : 'cjs'),
+    filename: process.env.ESM ? 'index.mjs' : 'index.js',
+    path: path.resolve(__dirname, 'dist'),
     library: {
       type: process.env.ESM ? 'module' : 'commonjs'
     }
@@ -39,7 +38,6 @@ module.exports = {
     chunkIds: "named",
   },
   plugins: [
-    new CleanWebpackPlugin(),
     new NodePolyfillPlugin()
   ],
   resolve: {
