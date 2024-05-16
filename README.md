@@ -1,3 +1,7 @@
+> ⚠️ This package will not work with storybook 8
+> 
+> Please use @storybook/test instead.
+
 # @storybook/expect
 
 [![npm version](https://img.shields.io/npm/v/@storybook/expect?label=%40storybook%2Fexpect)](https://npmjs.com/package/@storybook/expect)
